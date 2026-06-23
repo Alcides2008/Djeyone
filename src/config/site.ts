@@ -20,7 +20,7 @@ export const siteConfig = {
   social: {
     instagram: "https://www.instagram.com/jaclinedomingos_",
     instagramHandle: "@jaclinedomingos_",
-    facebook: "https://facebook.com/djeyone",
+    facebook: "https://www.facebook.com/djey.ngunza.ngunza",
   },
   /** Dados de pagamento (modelo manual — Angola). */
   payment: {
