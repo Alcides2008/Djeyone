@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Command claude -ErrorAction SilentlyContinue)",
+      "PowerShell(npm list -g claude 2>$null)",
+      "PowerShell(npm list -g @anthropic-ai/claude-code 2>$null)",
+      "PowerShell(robocopy \"C:\\\\Users\\\\alcid\\\\Desktop\\\\deyone-build\" \"C:\\\\Users\\\\alcid\\\\Desktop\\\\Djeyone Cosmeticos\" /E /MOVE /NFL /NDL; if \\($LASTEXITCODE -lt 8\\) { Remove-Item \"C:\\\\Users\\\\alcid\\\\Desktop\\\\deyone-build\" -Recurse -Force -ErrorAction SilentlyContinue; Write-Output \"=== MOVED OK \\(code $LASTEXITCODE\\) ===\" } else { Write-Output \"=== ROBOCOPY FAILED \\(code $LASTEXITCODE\\) ===\" }; exit 0)",
+      "Bash(sleep 12; cat \"/c/Users/alcid/AppData/Local/Temp/claude/C--Users-alcid-Desktop-Djeyone-Cosmeticos/ff7eab80-cd73-4194-8bb5-aa3e2c13e403/tasks/blpgge4b3.output\" 2>/dev/null | tail -20)"
+    ]
+  }
+}

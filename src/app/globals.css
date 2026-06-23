@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DJEYONE — Sistema de Design
+   Estética premium: tons neutros + acento dourado/champagne
+   ============================================================ */
+
+@theme {
+  /* ---- Cores da marca ---- */
+  --color-ink: #141414; /* preto suave (texto / fundo escuro) */
+  --color-charcoal: #1c1b19; /* superfícies escuras */
+  --color-cream: #faf7f1; /* off-white quente (fundo) */
+  --color-sand: #efe7da; /* bege */
+  --color-champagne: #e7d7ba; /* champagne claro */
+  --color-gold: #bfa06a; /* acento dourado principal */
+  --color-gold-deep: #a2854e; /* dourado escuro (hover) */
+  --color-muted: #6b665f; /* texto secundário */
+  --color-line: #e6dfd2; /* bordas / divisores */
+
+  /* ---- Tipografia ---- */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
+
+  /* ---- Cadência de animação ---- */
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base ------------------------------------------------------- */
+:root {
+  --background: var(--color-cream);
+  --foreground: var(--color-ink);
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-feature-settings: "kern", "liga";
+}
+
+/* Títulos editoriais ---------------------------------------- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
+}
+
+/* Seleção de texto ------------------------------------------ */
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+/* Scrollbar discreta ---------------------------------------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-sand);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-champagne);
+}
+
+/* Utilitários de marca -------------------------------------- */
+@layer utilities {
+  /* espaçamento de letras tipo editorial / luxo */
+  .tracking-luxe {
+    letter-spacing: 0.22em;
+  }
+  /* container central padrão do site */
+  .container-djeyone {
+    width: 100%;
+    max-width: 80rem; /* 1280px */
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .container-djeyone {
+      padding-inline: 2rem;
+    }
+  }
+}
