@@ -57,6 +57,16 @@ function friendlyError(err: unknown): string {
       return "Ative o início de sessão com Google no Firebase Console (Authentication → Sign-in method).";
     case "auth/account-exists-with-different-credential":
       return "Já existe uma conta com este email usando outro método.";
+    case "auth/unauthorized-domain":
+      return "Domínio não autorizado. No Firebase → Authentication → Settings → Domínios autorizados, adicione djeyone.vercel.app.";
+    case "auth/network-request-failed":
+      return "Falha de ligação. Verifique a internet e tente novamente.";
+    case "auth/invalid-api-key":
+    case "auth/api-key-not-valid":
+      return "Configuração do Firebase em falta (variáveis de ambiente na Vercel).";
+    case "auth/popup-blocked":
+    case "auth/popup-closed-by-user":
+      return "A janela do Google foi fechada ou bloqueada. Permita pop-ups e tente de novo.";
     default:
       return "Ocorreu um erro. Tente novamente.";
   }
